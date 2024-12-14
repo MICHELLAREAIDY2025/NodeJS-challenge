@@ -54,11 +54,7 @@ task 2 is marked as checked
   - <kbd>writing a CRUD</kbd>
   - <kbd>writing and reading files</kbd>
 
-## Step 1: Testing the software
 
-The software provided already has a few commands built-in. Let's try them.
-
-1. Run the file with `node tasks.js`
 2. Try entering "hello", then try "quit"
 3. Read the code, run the app again. Try to understand what is happening. Change a few things, get familiar with the code
 
