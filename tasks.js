@@ -81,6 +81,7 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+//help function list all available commands
 function help() {
   console.log("Available commands:");
   console.log("- hello: Responds with a greeting.");
