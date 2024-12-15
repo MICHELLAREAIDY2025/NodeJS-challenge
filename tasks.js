@@ -34,9 +34,10 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  if (text === 'quit\n') {
-    quit();
-  }
+    text = text.trim(); // Trim input to remove whitespace/newline
+    if (text === 'quit' || text === 'exit') { // Check for both commands
+      quit();
+    }
   else if(text === 'hello\n'){
     hello();
   }
