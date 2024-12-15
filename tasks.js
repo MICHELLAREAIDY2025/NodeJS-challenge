@@ -35,11 +35,15 @@ function startApp(name){
  */
 function onDataReceived(text) {
     text = text.trim(); // Trim input to remove whitespace/newline
+    console.log(`Received input: "${text}"`); // Log the received input for debugging
     if (text === 'quit' || text === 'exit') { // Check for both commands
       quit();
     }
-  else if(text === 'hello\n'){
-    hello();
+  // else if(text === 'hello\n'){
+    // hello();
+  // }
+  else if (text.startsWith('hello')) { // Check if the input starts with "hello"
+    hello(text); // Pass the full text to the hello function
   }
   else if (text === 'help') { // Check for the help command
     help();
@@ -88,6 +92,15 @@ function help() {
   console.log("- quit: Exits the application.");
   console.log("- exit: Exits the application.");
   console.log("- help: Lists all available commands.");
+}
+function hello(text) {
+  const args = text.split(' '); // Split the input into words
+  const name = args.slice(1).join(' '); // Get everything after "hello"
+  if (name) {
+    console.log(`hello ${name}!`);
+  } else {
+    console.log('hello!'); // Handle the case where no name is provided
+  }
 }
 
 // The following line starts the application
